@@ -1,13 +1,14 @@
 /**
  * Name: FIRST_NAME LAST_NAME
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 03/07/2024
  * File Name: Main.java
- * Description: Write a description for this class
+ * Description: Main executable class to run the program.
  */
 
 package edu.bu.met.cs665;
 
+import edu.bu.met.cs665.customer.Customer;
 import edu.bu.met.cs665.example1.Person;
 
 /**
@@ -22,17 +23,10 @@ public class Main {
    * However, please note that every assignment/final projects requires JUnit tests.
    */
   public static void main(String[] args) {
-    System.out.println("This is a test message from the Main class (Main.java file)");
-  }
 
-  /**
-   * This method performs XYZ and returns String.
-   *
-   * @return String
-   */
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getFirstName();
-  }
+    CustomerFactory customerFactory = new CustomerFactory();
+    Customer newCustomer = customerFactory.createNewCustomer("Billy");
 
+    System.out.println(newCustomer.generateEmail());
+  }
 }
