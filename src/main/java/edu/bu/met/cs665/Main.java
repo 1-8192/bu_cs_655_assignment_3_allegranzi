@@ -26,7 +26,9 @@ public class Main {
 
     CustomerFactory customerFactory = new CustomerFactory();
     Customer newCustomer = customerFactory.createNewCustomer("Billy");
+    Customer vipCustomer = customerFactory.createVipCustomer("Wilhelm");
 
     System.out.println(newCustomer.generateEmail());
+    System.out.println(vipCustomer.generateEmail());
   }
 }
