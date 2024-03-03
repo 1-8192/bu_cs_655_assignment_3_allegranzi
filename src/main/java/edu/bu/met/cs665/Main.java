@@ -1,5 +1,5 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: ALESSANDRO ALLEGRANZI
  * Course: CS-665 Software Designs & Patterns
  * Date: 03/07/2024
  * File Name: Main.java
@@ -7,8 +7,6 @@
  */
 
 package edu.bu.met.cs665;
-
-import edu.bu.met.cs665.customer.Customer;
 
 /**
  * This is the Main class. used to test the custommer factory, which creates different customer classes
@@ -24,12 +22,16 @@ public class Main {
    */
   public static void main(String[] args) {
 
-    CustomerFactory customerFactory = new CustomerFactory();
-    Customer newCustomer = customerFactory.createNewCustomer("Billy");
-    Customer vipCustomer = customerFactory.createVipCustomer("Wilhelm");
+    // New Customer case.
+    ConcreteCustomer newCustomer = new ConcreteCustomer("Tom");
+    NewCustomerEmailDecorator newCustomerEmailGenerator = new NewCustomerEmailDecorator(newCustomer);
+    newCustomerEmailGenerator.setAdditionalText("Check out these offers only valid for new customers!");
+    System.out.println(newCustomerEmailGenerator.generateEmail() + "\n");
 
-    System.out.println(newCustomer.generateEmail("We think you'd like these items.") + "\n");
-    System.out.println(vipCustomer.generateEmail(
-          "We think you'd like to travel in a private jet") + "\n");
+    // VIP Customer case.
+    ConcreteCustomer vipCustomer = new ConcreteCustomer("Giselle");
+    VipCustomerEmailDecorator vipCustomerEmailGenerator = new VipCustomerEmailDecorator(vipCustomer);
+    vipCustomerEmailGenerator.setAdditionalText("Want to fly in a private jet to a Michelin star restaurant?!");
+    System.out.println(vipCustomerEmailGenerator.generateEmail() + "\n");
   }
 }

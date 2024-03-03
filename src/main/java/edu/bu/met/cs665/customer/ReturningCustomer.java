@@ -1,7 +1,0 @@
-package edu.bu.met.cs665.customer;
-
-public class ReturningCustomer extends Customer {
-  public ReturningCustomer(String name) {
-    super(name);
-  }
-}
