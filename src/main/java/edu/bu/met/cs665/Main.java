@@ -9,10 +9,10 @@
 package edu.bu.met.cs665;
 
 import edu.bu.met.cs665.customer.Customer;
-import edu.bu.met.cs665.example1.Person;
 
 /**
- * This is the Main class.
+ * This is the Main class. used to test the custommer factory, which creates different customer classes
+ * that show different emails.
  */
 public class Main {
 
@@ -28,7 +28,8 @@ public class Main {
     Customer newCustomer = customerFactory.createNewCustomer("Billy");
     Customer vipCustomer = customerFactory.createVipCustomer("Wilhelm");
 
-    System.out.println(newCustomer.generateEmail());
-    System.out.println(vipCustomer.generateEmail());
+    System.out.println(newCustomer.generateEmail("We think you'd like these items.") + "\n");
+    System.out.println(vipCustomer.generateEmail(
+          "We think you'd like to travel in a private jet") + "\n");
   }
 }

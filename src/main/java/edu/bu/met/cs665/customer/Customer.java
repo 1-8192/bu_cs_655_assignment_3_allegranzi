@@ -4,13 +4,16 @@ public abstract class Customer {
 
   protected String name;
 
-  protected String emailText;
+  protected String emailBaseTemplate;
+
+  protected String emailSignofftemplate;
 
   public Customer(String name) {
     this.name = name;
   }
 
-  public String generateEmail() {
-    return "Dear " + name + "\n" + emailText;
+  public String generateEmail(String additionalText) {
+    return "Dear " + name + "\n" + emailBaseTemplate + "\n"
+          + additionalText + "\n" + emailSignofftemplate;
   };
 }
