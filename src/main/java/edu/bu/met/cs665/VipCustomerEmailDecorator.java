@@ -20,9 +20,9 @@ public class VipCustomerEmailDecorator extends EmailDecorator {
    */
   public VipCustomerEmailDecorator(ConcreteCustomer customer) {
     super(customer);
-    this.emailBaseTemplate = "You matter more to us than other customers. You are first class" +
-    " and a true VIP. Please click the links below for some bespoke experiences we do not offer to " +
-          "other, lesser clients.";
+    this.emailBaseTemplate = "You matter more to us than other customers. You are first class"
+          + " and a true VIP. Please click the links below for some bespoke experiences we "
+          + "do not offer to other, lesser clients.";
     this.emailSignofftemplate = "You are a rockstar!\n"
           + "- Globocorp";
   }

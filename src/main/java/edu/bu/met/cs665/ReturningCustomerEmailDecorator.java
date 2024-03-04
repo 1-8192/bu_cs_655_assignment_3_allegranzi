@@ -20,8 +20,10 @@ public class ReturningCustomerEmailDecorator extends EmailDecorator {
    */
   public ReturningCustomerEmailDecorator(ConcreteCustomer customer) {
     super(customer);
-    this.emailBaseTemplate = "We noticed you've shopped with us before! We are flattered you find our products "
-          + "and service worth trying again. We'd like to extend some offers below to keep you coming back again!";
+    this.emailBaseTemplate = "We noticed you've shopped with us before! "
+          + "We are flattered you find our products and service worth trying "
+          + "again. We'd like to extend some offers below to keep you "
+          + "coming back again!";
     this.emailSignofftemplate = "Thanks for shopping with us one more time!\n"
           + "- Globocorp";
   }

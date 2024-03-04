@@ -20,8 +20,9 @@ public class BusinessCustomerEmailDecorator extends EmailDecorator {
    */
   public BusinessCustomerEmailDecorator(ConcreteCustomer customer) {
     super(customer);
-    this.emailBaseTemplate = "B2B clients are incredibly important to Globocorp. Out industries are filled with "
-          + "synergy and the potential to do even more business together. Please read more below:";
+    this.emailBaseTemplate = "B2B clients are incredibly important to Globocorp. "
+          + "Our industries are filled with synergy and the potential to do even "
+          + "more business together. Please read more below:";
     this.emailSignofftemplate = "We work better 2gether!\n"
           + "- Globocorp";
   }

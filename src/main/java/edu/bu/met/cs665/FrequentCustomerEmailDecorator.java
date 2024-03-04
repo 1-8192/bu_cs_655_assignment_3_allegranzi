@@ -20,8 +20,9 @@ public class FrequentCustomerEmailDecorator extends EmailDecorator {
    */
   public FrequentCustomerEmailDecorator(ConcreteCustomer customer) {
     super(customer);
-    this.emailBaseTemplate = "You shop with us so frequently, we have put together some great deals for you"
-          + " as a show of thanks. Hope they keep you shopping with us again and again.";
+    this.emailBaseTemplate = "You shop with us so frequently, we have put together "
+          + "some great deals for you as a show of thanks. Hope they keep you "
+          + "shopping with us again and again.";
     this.emailSignofftemplate = "Thanks for shopping with us frequently!\n"
           + "- Globocorp";
   }

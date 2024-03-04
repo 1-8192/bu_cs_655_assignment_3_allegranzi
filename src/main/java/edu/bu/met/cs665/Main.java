@@ -9,8 +9,8 @@
 package edu.bu.met.cs665;
 
 /**
- * This is the Main class. used to test the custommer factory, which creates different customer classes
- * that show different emails.
+ * This is the Main class. used to test the custommer factory, which creates different
+ * customer classes that show different emails.
  */
 public class Main {
 
@@ -19,37 +19,47 @@ public class Main {
    * I have set up 5 examples for each customer type requested in the assignment.
    */
   public static void main(String[] args) {
-    System.out.println("Welcome to Globocorp's email generator. Please see below some hard-coded examples"
-          + " of how we create customer specific emails using appropriate templates.\n");
+    System.out.println("Welcome to Globocorp's email generator. Please see below some "
+          + "hard-coded examples of how we create customer specific emails using "
+          + "appropriate templates.\n");
 
     // New Customer case.
     ConcreteCustomer newCustomer = new ConcreteCustomer("Tom");
-    NewCustomerEmailDecorator newCustomerEmailGenerator = new NewCustomerEmailDecorator(newCustomer);
-    newCustomerEmailGenerator.setAdditionalText("Check out these offers only valid for new customers!");
+    NewCustomerEmailDecorator newCustomerEmailGenerator =
+          new NewCustomerEmailDecorator(newCustomer);
+    newCustomerEmailGenerator.setAdditionalText(
+          "Check out these offers only valid for new customers!");
     System.out.println(newCustomerEmailGenerator.generateEmail() + "\n");
 
     // VIP Customer case.
     ConcreteCustomer vipCustomer = new ConcreteCustomer("Giselle");
-    VipCustomerEmailDecorator vipCustomerEmailGenerator = new VipCustomerEmailDecorator(vipCustomer);
-    vipCustomerEmailGenerator.setAdditionalText("Want to fly in a private jet to a Michelin star restaurant?!");
+    VipCustomerEmailDecorator vipCustomerEmailGenerator =
+          new VipCustomerEmailDecorator(vipCustomer);
+    vipCustomerEmailGenerator.setAdditionalText(
+          "Want to fly in a private jet to a Michelin star restaurant?!");
     System.out.println(vipCustomerEmailGenerator.generateEmail() + "\n");
 
     // Frequent Customer case.
     ConcreteCustomer freqCustomer = new ConcreteCustomer("Karen");
-    FrequentCustomerEmailDecorator freqCustomerEmailGenerator = new FrequentCustomerEmailDecorator(freqCustomer);
+    FrequentCustomerEmailDecorator freqCustomerEmailGenerator =
+          new FrequentCustomerEmailDecorator(freqCustomer);
     freqCustomerEmailGenerator.setAdditionalText("BOGO sales all day!");
     System.out.println(freqCustomerEmailGenerator.generateEmail() + "\n");
 
     // Business Customer case.
     ConcreteCustomer busCustomer = new ConcreteCustomer("Mr. James Esquire");
-    BusinessCustomerEmailDecorator busCustomerEmailGenerator = new BusinessCustomerEmailDecorator(busCustomer);
-    busCustomerEmailGenerator.setAdditionalText("Would you like to travel together to the business expo?");
+    BusinessCustomerEmailDecorator busCustomerEmailGenerator =
+          new BusinessCustomerEmailDecorator(busCustomer);
+    busCustomerEmailGenerator.setAdditionalText(
+          "Would you like to travel together to the business expo?");
     System.out.println(busCustomerEmailGenerator.generateEmail() + "\n");
 
     // Returning Customer case.
     ConcreteCustomer retCustomer = new ConcreteCustomer("Tyson");
-    ReturningCustomerEmailDecorator retCustomerEmailGenerator = new ReturningCustomerEmailDecorator(retCustomer);
-    retCustomerEmailGenerator.setAdditionalText("use promo code TWICE for more savings.");
+    ReturningCustomerEmailDecorator retCustomerEmailGenerator =
+          new ReturningCustomerEmailDecorator(retCustomer);
+    retCustomerEmailGenerator.setAdditionalText(
+          "use promo code TWICE for more savings.");
     System.out.println(retCustomerEmailGenerator.generateEmail() + "\n");
   }
 }
