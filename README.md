@@ -29,6 +29,8 @@ easy for others to read and maintain.
 
 My implementation
 
+![UML Diagram](diagrams/assignment_3.drawio.pdf)
+
 - Describe how you have avoided duplicated code and why it is important.
 
 - If applicable, mention any design patterns you have used and explain why they were
