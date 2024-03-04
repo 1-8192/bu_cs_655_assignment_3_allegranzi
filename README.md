@@ -33,28 +33,28 @@ https://github.com/1-8192/bu_cs_655_assignment_3_allegranzi
 
 # Implementation Description 
 
+Diagram:  
+
+![UML Diagram](diagrams/assignment_3.drawio.pdf)
 
 For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
+be easily added or removed in the future.  
 
 
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
+easy for others to read and maintain.  
 
-My implementation
-
-![UML Diagram](diagrams/assignment_3.drawio.pdf)
-
-- Describe how you have avoided duplicated code and why it is important.
+- Describe how you have avoided duplicated code and why it is important.  
 
 - If applicable, mention any design patterns you have used and explain why they were
-chosen.
+chosen.  
 
 I implemented the Decorator Design pattern for this project. I'd never implemented a Decorator before, and I thought the is-a and has-a relationship combo would be interesting to implement.
 Additionally, the assignment requirements are well suited to using the Decorator Pattern due to its ability to dynamically augment the behavior of objects without altering their structure. 
-By employing concrete decorators for each customer type, the application can seamlessly enhance the email generation process. The pattern facilitates the incorporation of tailored features for individual customer segments, such as specific email introductions, signoffs, and customizable body text, all while maintaining a modular and flexible structure. This adaptability aligns well with the diverse requirements of generating personalized emails for various customer types, ensuring a scalable and maintainable solution. The Decorator design pattern thus enables the efficient customization of email content for different segments, contributing to the overall success of the "Email Generation" application.
+By employing concrete decorators for each customer type, the application enhances the email generation process. The pattern facilitates the incorporation 
+of tailored features for individual customer segments, such as specific email introductions, signoffs, and customizable body text, all while maintaining a modular and flexible structure.
 
 The Strategy and Factory Method patterns I think would also have worked really well with the project. The Strategy pattern, especially, I think would have been a nice. light-weight solution.
 
