@@ -7,7 +7,23 @@
 | Assignment # | 3                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+
+For this assignment, I developed an "Email Generation" application for a company that has various customer segments: Business, Returning, Frequent, New, and VIP. 
+The company aims to streamline its communication by sending personalized emails to each customer type. The task requires creating a custom application capable of 
+automatically generating emails based on a starting template, tailored to the characteristics of each customer segment. 
+
+Using the Decorator design pattern, I implemented an email generation app that sets up emails for specific customer segments using templates for an email introduction and signoff,
+while also allowing custom text to be inserted into the "body" of the email.
+
+The main assignment tasks are:
+- Implement separate classes for each customer type.  
+  I set up concrete decorators for each customer type to create appropriate emails. More below.  
+
+- Demonstrate the functionality of the "Email Generation" application through tests that show how it generates unique email text for each customer type.  
+  I have written thorough unit tests and also set up test cases in the Main.java executable class.  
+
+- Create at least one instance of each customer type for testing purposes.  
+  I did this in the Main.java class. Please see the screenshot below to view the program in action.  
 
 Screenshot:
 ![screen grab](images/screengrab.png)
@@ -36,9 +52,11 @@ My implementation
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
 
-I implemented the Decorator Design pattern for this project.
+I implemented the Decorator Design pattern for this project. I'd never implemented a Decorator before, and I thought the is-a and has-a relationship combo would be interesting to implement.
+Additionally, the assignment requirements are well suited to using the Decorator Pattern due to its ability to dynamically augment the behavior of objects without altering their structure. 
+By employing concrete decorators for each customer type, the application can seamlessly enhance the email generation process. The pattern facilitates the incorporation of tailored features for individual customer segments, such as specific email introductions, signoffs, and customizable body text, all while maintaining a modular and flexible structure. This adaptability aligns well with the diverse requirements of generating personalized emails for various customer types, ensuring a scalable and maintainable solution. The Decorator design pattern thus enables the efficient customization of email content for different segments, contributing to the overall success of the "Email Generation" application.
 
-The Strategy and Factory Method patterns I think would also worked really well with the project. The Strategy pattern, especially, I think would have been a nice. light-weight solution.
+The Strategy and Factory Method patterns I think would also have worked really well with the project. The Strategy pattern, especially, I think would have been a nice. light-weight solution.
 
 
 # Maven Commands

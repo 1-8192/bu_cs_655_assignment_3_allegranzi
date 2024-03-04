@@ -25,11 +25,11 @@ public class Main {
 
     // New Customer case.
     ConcreteCustomer newCustomer = new ConcreteCustomer("Tom");
-    NewCustomerEmailDecorator newCustomerEmailGenerator =
+    NewCustomerEmailDecorator newCustomerEmailDecorator =
           new NewCustomerEmailDecorator(newCustomer);
-    newCustomerEmailGenerator.setAdditionalText(
+    newCustomerEmailDecorator.setAdditionalText(
           "Check out these offers only valid for new customers!");
-    System.out.println(newCustomerEmailGenerator.generateEmail() + "\n");
+    System.out.println(newCustomerEmailDecorator.generateEmail() + "\n");
 
     // VIP Customer case.
     ConcreteCustomer vipCustomer = new ConcreteCustomer("Giselle");
