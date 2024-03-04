@@ -9,7 +9,7 @@
 package edu.bu.met.cs665;
 
 /**
- * Concrete decorator to genereate emails for new customers.
+ * Concrete decorator to generate emails for VIP customers.
  */
 public class VipCustomerEmailDecorator extends EmailDecorator {
 
@@ -27,4 +27,3 @@ public class VipCustomerEmailDecorator extends EmailDecorator {
           + "- Globocorp";
   }
 }
-

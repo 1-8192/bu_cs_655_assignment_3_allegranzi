@@ -9,6 +9,9 @@
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
 
+Screenshot:
+![screen grab](images/screengrab.png)
+
 # GitHub Repository Link:
 https://github.com/1-8192/bu_cs_655_assignment_3_allegranzi
 
@@ -19,11 +22,21 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+
+
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+
+My implementation
+
 - Describe how you have avoided duplicated code and why it is important.
+
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+
+I implemented the Decorator Design pattern for this project.
+
+The Strategy and Factory Method patterns I think would also worked really well with the project. The Strategy pattern, especially, I think would have been a nice. light-weight solution.
 
 
 # Maven Commands

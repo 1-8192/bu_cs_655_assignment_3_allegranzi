@@ -14,17 +14,17 @@ package edu.bu.met.cs665;
 public class ConcreteCustomer implements Customer {
 
   /**
-   * The customer's name.
+   * The customer's name. Default set in case of empty strings or nulls.
    */
   protected String name;
 
   /**
-   * Class constructor.
+   * Class constructor. Sets default name value if null or "" passed in.
    *
    * @param name customer name.
    */
   public ConcreteCustomer(String name) {
-    this.name =  name;
+    this.name =  name != null && !name.isEmpty() ? name : "Lovely Human";
   }
 
   /**
