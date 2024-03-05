@@ -75,7 +75,7 @@ By employing concrete decorators for each customer type, the application enhance
 of tailored features for individual customer segments, such as specific email introductions, signoffs, and customizable body text, all while maintaining a modular and flexible structure.
 
 The Strategy and Factory Method patterns I think would also have worked really well with the project. Factory classes could create specific customer types on demand. The Strategy pattern, especially, 
-I think would have been a nice. light-weight solution to add desired functionality at run time.
+I think would have been a nice, light-weight solution to add desired functionality at run time.
 
 # Maven Commands
 
