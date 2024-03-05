@@ -9,8 +9,8 @@
 package edu.bu.met.cs665;
 
 /**
- * This is the Main class. used to test the custommer factory, which creates different
- * customer classes that show different emails.
+ * This is the Main class. Used to create customers and apply the email decorators,
+ * which show different emails.
  */
 public class Main {
 

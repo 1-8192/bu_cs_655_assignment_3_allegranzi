@@ -33,31 +33,49 @@ https://github.com/1-8192/bu_cs_655_assignment_3_allegranzi
 
 # Implementation Description 
 
-Diagram:  
+## Diagram:  
 
 ![UML Diagram](diagrams/assignment_3.drawio.pdf)
 
-For each assignment, please answer the following:
+## For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.  
+### Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.  
 
+The Decorator pattern makes my application very flexible. Anytime a new customer type would need a different email template, the only
+thing required would be creating a new concrete decorator with the appropriate email template text. Similarly, because the  email generation
+capability is decorated onto the concrete customer class, to remove a "customer type" you would only need to delete the decorator. The customer
+class itself would not need to be changed, and wouldn't affect other customer functionality. 
 
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.  
+Additionally, I opted to use an interface for the Customer class, rather than making it anstract, so adding fields or functionality to the concrete
+customer class is very straightforward and does not run into inheritance limitations. Allowing the generateEmail() method to take an argument
+of custom text also makes the method more flexible to create customer emails within the customer type templates.
 
-- Describe how you have avoided duplicated code and why it is important.  
+### Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.  
 
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.  
+My implementation is very simple and readable, thanks to the use of the Decorator pattern, which is a common design pattern. The Customer Interface and
+ConcreteCustomer classes have a clear relationship and establish a clear contract due to the interface. The EmailDecorator abstract class defines a focused, clear
+decorator class to add email generation capabilities to customer instances. The concrete decorator classes feature only the 
+templated text specific to the customer types they decorate, keeping the overall implementation simple and understandable.
+
+The class examples showed the use of an abstract class for the abstract wrapped component, but I opted for an interface as in [this example](https://refactoring.guru/design-patterns/decorator#:~:text=don%E2%80%99t%20need%20it.-,Structure,-The%20Component%20declares).
+I like the use of an interface rather than inheritance here as it sets up a clearer contract between the wrapped component and the decorator, and frees
+up the concrete component to be its own class otherwise.
+
+### Describe how you have avoided duplicated code and why it is important.  
+
+Avoiding duplicate code is important to help make application code concise and readable. My use of the decorator pattern cuts down on duplicate code by eliminating the
+need for specific customer classes that are otherwise completely similar other than their email text templates. Additionally, by defining the logic of the generateEmail()
+method in the abstract Email Decorator, that method does not need to be redefined for each of the concrete email decorator classes.
+
+### If applicable, mention any design patterns you have used and explain why they were chosen.  
 
 I implemented the Decorator Design pattern for this project. I'd never implemented a Decorator before, and I thought the is-a and has-a relationship combo would be interesting to implement.
 Additionally, the assignment requirements are well suited to using the Decorator Pattern due to its ability to dynamically augment the behavior of objects without altering their structure. 
 By employing concrete decorators for each customer type, the application enhances the email generation process. The pattern facilitates the incorporation 
 of tailored features for individual customer segments, such as specific email introductions, signoffs, and customizable body text, all while maintaining a modular and flexible structure.
 
-The Strategy and Factory Method patterns I think would also have worked really well with the project. The Strategy pattern, especially, I think would have been a nice. light-weight solution.
-
+The Strategy and Factory Method patterns I think would also have worked really well with the project. Factory classes could create specific customer types on demand. The Strategy pattern, especially, 
+I think would have been a nice. light-weight solution to add desired functionality at run time.
 
 # Maven Commands
 
